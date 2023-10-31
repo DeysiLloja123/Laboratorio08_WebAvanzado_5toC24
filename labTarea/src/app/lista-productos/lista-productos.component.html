@@ -1,0 +1,25 @@
+<h1>Listado de Productos *_*</h1>
+
+<table id="tableExample3" class="table">
+    <thead>
+        <tr>
+            <th>Codigo</th>
+            <th>Descripción</th>
+            <th>Precio</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let producto of productos; index as i">
+            <td>{{producto.codigo}}</td>
+            <td>{{producto.descripcion}}</td>
+            <td>{{producto.precio}}</td>
+            <td>
+                <button class="btn btn-danger" (click)="eliminarProducto(i)">Eliminar</button>
+                <a [routerLink]="['/editar', i]" class="btn btn-primary">Editar</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<a routerLink="/agregar" class="btn btn-success">Nuevo producto</a>

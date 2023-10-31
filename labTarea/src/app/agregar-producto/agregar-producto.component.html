@@ -1,0 +1,28 @@
+
+<h1> AGREGAR PRODUCTO *-*</h1>
+<div class="container">
+    <div class="card-body">
+        <form (ngSubmit)="agregarProducto()">
+          <div class="form-group">
+            <label for="codigo">Escriba el Codigo</label>
+            <input id="codigo" [(ngModel)]="productoForm.codigo" name="codigo" 
+            placeholder="Código" class="form-control"><br>
+          </div><br>
+          <div class="form-group">
+            <label for="descripcion">Escriba la Descripción</label>
+            <input id="descripcion" [(ngModel)]="productoForm.descripcion" name="descripcion" 
+            placeholder="Descripción" class="form-control"><br>
+          </div><br>
+          <div class="form-group">
+            <label for="precio">Escriba el Precio</label>
+            <input id="precio" [(ngModel)]="productoForm.precio" name="precio" 
+            placeholder="Precio" class="form-control"><br>
+          </div><br>
+          <button type="submit" class="btn btn-success">Guardar</button>
+        </form>
+    </div>
+</div><br>
+  <div class="container mt-5">
+    <a routerLink="/">Regresar</a>
+  </div>
+  
